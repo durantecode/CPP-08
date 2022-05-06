@@ -6,7 +6,7 @@
 /*   By: ldurante <ldurante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 19:11:54 by ldurante          #+#    #+#             */
-/*   Updated: 2022/05/06 01:30:49 by ldurante         ###   ########.fr       */
+/*   Updated: 2022/05/06 13:01:45 by ldurante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@
 #include <iostream>
 #include <stack>
 #include <iterator>
-#include <vector>
 #include <deque>
 #include <list>
+#include <string>
 
 template <typename T>
 class MutantStack : public std::stack<T>
@@ -32,8 +32,6 @@ class MutantStack : public std::stack<T>
 		MutantStack(MutantStack const &toCopy);
 		~MutantStack(void);
 		MutantStack &operator = (MutantStack const &toCopy);
-
-		// typedef typename std::stack<T>::container_type::iterator		iterator;
 		
 		iterator begin() { return this->c.begin(); };
 		iterator end() { return this->c.end(); };
