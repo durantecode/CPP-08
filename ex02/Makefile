@@ -6,7 +6,7 @@
 #    By: ldurante <ldurante@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/05 19:10:36 by ldurante          #+#    #+#              #
-#    Updated: 2022/05/05 19:11:34 by ldurante         ###   ########.fr        #
+#    Updated: 2022/06/01 20:48:09 by ldurante         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@
 NAME = mutantstack
 CXX = clang++
 RM = rm -f
-CXXFLAGS = -Wall -Werror -Wextra -std=c++98 
+CXXFLAGS = -Wall -Werror -Wextra -std=c++98 -pedantic
 
 # COLORS #
 

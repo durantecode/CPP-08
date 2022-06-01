@@ -6,7 +6,7 @@
 #    By: ldurante <ldurante@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/05/04 23:39:37 by ldurante          #+#    #+#              #
-#    Updated: 2022/05/04 23:39:47 by ldurante         ###   ########.fr        #
+#    Updated: 2022/06/01 20:48:19 by ldurante         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,7 @@
 NAME = easyfind
 CXX = clang++
 RM = rm -f
-CXXFLAGS = -Wall -Werror -Wextra -std=c++98 
+CXXFLAGS = -Wall -Werror -Wextra -std=c++98 -pedantic
 
 # COLORS #
 
