@@ -6,7 +6,7 @@
 /*   By: ldurante <ldurante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 23:39:55 by ldurante          #+#    #+#             */
-/*   Updated: 2022/06/01 22:24:04 by ldurante         ###   ########.fr       */
+/*   Updated: 2022/06/21 16:20:08 by ldurante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,12 +26,14 @@ void test(T &container, int n)
 
 int main(void)
 {
+	std::cout << "------ TEST VECTOR ------" << std::endl;
+	
 	std::vector<int> v;
 
 	for (int i = 0; i < 100; i++)
 		v.push_back(i * 2);
 	
-	std::cout << "------ TEST VECTOR ------" << std::endl;
+	test(v, 3);
 	test(v, 32);
 	test(v, 48);
 	test(v, -42);
@@ -43,9 +45,10 @@ int main(void)
 	for (int i = 0; i < 100; i++)
 		l.push_back(i * 2);
 	
+	test(l, 1);
 	test(l, 32);
 	test(l, 48);
 	test(l, -42);
-	
+
 	return (0);
 }
