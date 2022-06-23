@@ -6,7 +6,7 @@
 /*   By: ldurante <ldurante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/04 23:45:58 by ldurante          #+#    #+#             */
-/*   Updated: 2022/06/21 16:12:49 by ldurante         ###   ########.fr       */
+/*   Updated: 2022/06/23 09:45:17 by ldurante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,13 @@
 
 #include <iostream>
 #include <algorithm>
+
+/* The typename keyword is used in templates, where without it the compiler
+doesn't know that it's a type name instead of member data.
+
+/* Find returns an iterator to the first element in the range that compares equal to val.
+If no elements match, the function returns last. */
+
 
 template <typename T>
 bool easyfind(T &container, const int toFind)

@@ -6,7 +6,7 @@
 /*   By: ldurante <ldurante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 13:34:30 by ldurante          #+#    #+#             */
-/*   Updated: 2022/06/21 18:13:43 by ldurante         ###   ########.fr       */
+/*   Updated: 2022/06/23 10:35:31 by ldurante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,23 +46,16 @@ void Span::addNumber(int n)
 	m_vector.push_back(n);
 }
 
-void Span::addRange(int min, int max)
+void	Span::addRange(std::vector<int>::iterator begin,
+		std::vector<int>::iterator end)
 {
-	int spaceLeft;
-	int spaceRequired;
+	unsigned int		spaceLeft;
+	std::vector<int>	tmp(begin, end);
 
-	if (min > max)
-	{
-		int tmp = min;
-		min = max;
-		max = tmp;
-	}
 	spaceLeft = m_size - (int)m_vector.size();
-	spaceRequired = max - min;
-	if (spaceRequired > spaceLeft)
+	if (tmp.size() > spaceLeft)
 		throw NotEnoughSpace();
-	for (int i = min; i < max; i++)
-		m_vector.push_back(i);
+	copy(tmp.begin(), tmp.end(), std::back_inserter(this->m_vector));
 }
 
 int Span::shortestSpan(void)

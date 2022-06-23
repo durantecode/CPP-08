@@ -6,7 +6,7 @@
 /*   By: ldurante <ldurante@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/05 13:00:27 by ldurante          #+#    #+#             */
-/*   Updated: 2022/06/21 18:14:50 by ldurante         ###   ########.fr       */
+/*   Updated: 2022/06/23 10:50:27 by ldurante         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,29 +86,30 @@ int main(void)
 	{
 		std::cout << "Try to add range of elements:" << std::endl;
 		Span sp5(100);
+		std::vector<int>	v;
 
-		sp5.addRange(324, 410);
+		v.push_back(25);
+		v.push_back(5);
+		v.push_back(12);
+		v.push_back(90);
+		v.push_back(-2);
+
+		sp5.addRange(v.begin(), v.end());
 		std::cout << sp5.shortestSpan() << std::endl;
 		std::cout << sp5.longestSpan() << std::endl;
 
 		std::cout << "-------------------------------\n" << std::endl;
 		std::cout << "Try to add bigger range than space:" << std::endl;
+		for (int i = 0; i < 120; i++)
+    		v.push_back(rand()%10000);
 		try
 		{
-			sp5.addRange(20, 60);	
+			sp5.addRange(v.begin(), v.end());
 		}
 		catch(const std::exception& e)
 		{
 			std::cerr << e.what() << '\n';
 		}
-		try
-		{
-			sp5.addRange(5, 2);	
-		}
-		catch(const std::exception& e)
-		{
-			std::cerr << e.what() << '\n';
-		}	
 	}	
 	return (0);
 }
